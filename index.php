@@ -14,7 +14,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">JM Ebia</h1>
-            <p class="lead">This work-in-progress site will house my portfolio.</p>
+            <p class="lead">Programmer</p>
         </div>
     </div>
 

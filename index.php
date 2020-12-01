@@ -12,23 +12,105 @@
   </head>
   <body>
     <div class="container pt-5">
-
+        
         <div class="row">
-            <div class="col-md-4 p-3">
-              <div class="text-center">
+            <div class="col-md-12 pt-3">
+            <div class="text-center">
                 <img src="assets/img/bongocat.gif" class="img-fluid" alt="...">
               </div>
             </div>
-            <div class="col-md-8 pt-md-4">
-                <div class="display-2">J.M. Ebia</div>
+            <div class="col-md-12 text-center">
+                <div class="display-4 font-weight-bold text-info">J.M. EBIA</div>
                 <div class="lead">
-                  <span class="text-muted">me@jmebia.com</span> 
-                  <span class="text-primary h4">Web Developer</span>
+                
+                <span class="text-info h4">Web Developer</span><br>
+                  <span class="">me@jmebia.com</span> 
                 </div>
             </div>
         </div>
+        <hr class="mt-2">
+        
+        <div class="container">
+          <p class="lead text-center">
+            Hello world! Welcome to my page. I am a web/software developer based in Manila.
+          </p>
+        </div>
 
+        <div class="container mt-5 px-md-5 mb-4">
+          <div class="card">
+            <div class="card-header">
+              Resume
+            </div>
+            <div class="card-body px-md-5 text-center">
+              <!-- skills section -->
+              <h3 class="text-info mt-3">Skills</h3>
+              <span class="lead">
+                PHP, HTML5, CSS3, JavaScript, C#.NET, Java
+              </span><br>
+              <span class="lead">
+                Apache, MySQL
+              </span><br>
+              <span class="lead">
+                Laravel, ASP.NET
+              </span><br>
+              <span class="lead">
+                Linux and Windows environments
+              </span><br>
+              <span class="lead">
+                Agile Methodologies
+              </span><br>
+
+              <hr class="mt-4 mb-4">
+              <!-- education section -->
+              <h3 class="text-info">Education</h3>
+              <span class="lead">
+                Bachelor of Science in Computer Science (May 2018)<br>
+                <span class="text-muted h5">Adamson University</span> 
+              </span><br>
+
+              <hr class="mt-4 mb-4">
+              <!-- work experience section -->
+              <h3 class="text-info">Work Experience</h3>
+              <div class="lead mb-1">
+                <span class="text-info h5">Full-Stack Web Developer</span> 
+                / Z-Solutions, September 2020 - Present
+              </div>
+
+              <div class="lead mb-1">
+                <span class="text-info h5">Part-time</span> 
+                / Wyvern Corp., September 2020 - Present
+              </div>
+
+              <div class="lead mb-1">
+                <span class="text-muted h5">Web Developer</span> 
+                / Wyvern Corp., February 2019 - September 2020
+              </div>
+              <div class="lead mb-1">
+                <span class="text-muted h5">Web Developer</span> 
+                / Omnibus Tecnhologies, June 2018 - September 2020
+              </div>
+              
+              <div class="lead mb-1">
+                <span class="text-muted h5">Intern</span> 
+                / UP Information Technology Development Center , December 2017 - April 2018
+              </div>
+
+              <div class="lead mb-1">
+                <span class="text-info h5">Freelance Developer</span> 
+                , 2017 - Present
+              </div>
+
+              <hr class="mt-4 mb-4">
+              <!-- education section -->
+
+            </div>
+          </div>
+        </div>
     </div>
+    <hr class="mt-5">
+    <footer class="container-fluid py-4 text-center text-muted">
+      This website was created by JM Ebia. Email me! <span class="text-primary">me@jmebia.com</span>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

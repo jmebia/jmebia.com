@@ -20,7 +20,7 @@
               </div>
             </div>
             <div class="col-md-8 pt-md-4">
-                <div class="display-2">JM Ebia</div>
+                <div class="display-2">J.M. Ebia</div>
                 <div class="lead">
                   <span class="text-muted">me@jmebia.com</span> 
                   <span class="text-primary h4">Web Developer</span>

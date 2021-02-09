@@ -47,19 +47,19 @@
             <div class="absolute block inset-x-0 bottom-0 p-5 mx-auto items-center text-center">
                 <div class="md:flex md:w-1/3 lg:1/4 mx-auto text-md md:text-xl place-self-center">
                     <span class="pb-4 block md:flex md:mx-auto animate__animated animate__fadeIn animate__delay-2s">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/jmebia/">
                             <i class="fab fa-linkedin"></i> 
                             LinkedIn
                         </a>
                     </span>
                     <span class="pb-4 block md:flex md:mx-auto animate__animated animate__fadeIn animate__delay-3s">
-                        <a href="#">
+                        <a href="https://github.com/jmebia">
                             <i class="fab fa-github"></i> 
                             GitHub
                         </a>
                     </span>
                     <span class="pb-4 block md:flex md:mx-auto animate__animated animate__fadeIn animate__delay-4s">
-                        <a href="#">
+                        <a href="https://twitter.com/poltnine">
                             <i class="fab fa-twitter-square"></i> 
                             Twitter
                         </a>

@@ -63,7 +63,7 @@
                             </a>
                         </span>
                         <span class="p-4 flex hover:text-gray-200 px-2">
-                            <a href="#">
+                            <a href="{{ route('journal.home') }}">
                                 Journal
                             </a>
                         </span>

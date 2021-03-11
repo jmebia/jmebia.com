@@ -16,13 +16,14 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-
             $table->string('title');
             $table->string('meta_title');
-            $table->string('description');
-            $table->string('content');
-            $table->string('cover_photo_url');
+            $table->longText('post_url')->unique();
+            $table->string('description')->nullable();
+            $table->longtext('content');
+            $table->string('cover_photo_url')->nullable();
             $table->foreignId('posted_by');
+            $table->foreignId('parent_post')->nullable();
         });
     }
 

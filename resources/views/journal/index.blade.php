@@ -63,9 +63,7 @@
 			var table = $('#example').DataTable( {
 					responsive: true,
                     dom: 'frtipq'
-				} )
-				.columns.adjust()
-				.responsive.recalc();
+				} );
 		} );
 </script>
 @show

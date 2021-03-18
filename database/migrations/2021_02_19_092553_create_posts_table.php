@@ -23,7 +23,9 @@ class CreatePostsTable extends Migration
             $table->longtext('content');
             $table->string('cover_photo_url')->nullable();
             $table->foreignId('posted_by');
-            $table->foreignId('parent_post')->nullable();
+            $table->foreignId('parent_post_id')->nullable();
+            $table->foreignId('category_id')->nullable();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 

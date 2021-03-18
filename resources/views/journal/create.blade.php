@@ -3,7 +3,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Journal
+            New Journal Entry
         </h2>
     </x-slot>
 
@@ -13,16 +13,35 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form method="POST" action="{{ route('journal.store') }}">
                         @csrf
-                        <div class="mb-8">
-                            <label class="text-xl">Title</label></br>
-                            <input type="text" class="border-gray-300" name="title" id="title" required></input>
+                        
+                        <div class="mb-4">
+                            <label class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label></br>
+                            <input type="text" class="border-gray-400 w-full" name="title" id="title" required></input>
                         </div>
 
-                        <div class="mb-8">
-                            <label class="text-xl">Content</label></br>
-                            <textarea name="content"></textarea>
+                        <div class="mb-4">
+                            <label class="text-xl text-gray-600">Description</label></br>
+                            <input type="text" class="border-gray-400 w-full" name="description" placeholder="(Optional)" id="description"></input>
                         </div>
-                        <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit Post</button>
+
+                        <div class="mb-4">
+                            <label class="text-xl text-gray-600">Content <span class="text-red-500">*</span></label></br>
+                            <textarea name="content" class="border-gray-400"></textarea>
+                        </div>
+
+                        @isset($categories)
+                        <div class="mb-8">
+                            <label class="text-xl text-gray-600">Category <span class="text-red-500">*</span></label></br>
+                            <select class="border-gray-400" name="category" required>
+                                <option value="">-Select Category-</option>
+                                @foreach($categories as $cat)
+                                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @endif
+
+                        <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Create Post</button>
 
                     </form>
                 </div>

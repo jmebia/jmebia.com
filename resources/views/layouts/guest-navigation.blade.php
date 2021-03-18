@@ -62,7 +62,8 @@
                                 Home
                             </a>
                         </span>
-                        <span class="p-4 flex hover:text-gray-200 px-2">
+                        <span class="p-4 flex hover:text-gray-200 px-2
+                            {{ (request()->has('journal/*')) ? 'border-b border-blue-500' : '' }}">
                             <a href="{{ route('journal.home') }}">
                                 Journal
                             </a>

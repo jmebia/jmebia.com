@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('meta_title');
-            $table->longText('post_url')->unique();
+            $table->string('post_url', 30)->unique();
             $table->string('description')->nullable();
             $table->longtext('content');
             $table->string('cover_photo_url')->nullable();

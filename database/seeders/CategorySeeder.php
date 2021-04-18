@@ -31,6 +31,10 @@ class CategorySeeder extends Seeder
                 'name' => 'Video Games',
                 'description' => 'Video games related post',
             ],
+            [
+                'name' => 'Arts and Crafts',
+                'description' => 'Video games related post',
+            ],
         ]);
     }
 }

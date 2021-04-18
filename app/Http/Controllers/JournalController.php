@@ -26,10 +26,10 @@ class JournalController extends Controller
         return view('journal.index', compact('posts'));
     }
 
-    public function show($url) {
-        $post = Post::where('post_url', $url)->first();
-        return view('journal.show', compact('post'));
-    }
+    // public function show($url) {
+    //     $post = Post::where('post_url', $url)->first();
+    //     return view('journal.show', compact('post'));
+    // }
 
     public function create() {
         $categories = Category::all();

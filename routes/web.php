@@ -22,18 +22,21 @@ Route::get('/journal', function() {
     return view('journal.home', compact('posts'));
 })->name('journal.home');
 
-Route::get('/journal/index', [App\Http\Controllers\JournalController::class, 'index'])->name('journal.index');
-Route::get('/journal/create', [App\Http\Controllers\JournalController::class, 'create'])->name('journal.create');
-Route::post('/journal/store', [App\Http\Controllers\JournalController::class, 'store'])->name('journal.store');
-Route::get('/journal/{url}/edit', [App\Http\Controllers\JournalController::class, 'edit'])->name('journal.edit');
-Route::put('/journal/update/{id}', [App\Http\Controllers\JournalController::class, 'update'])->name('journal.update');
-Route::get('/journal/{url}', [App\Http\Controllers\JournalController::class, 'show'])->name('journal.show');
+Route::get('/u/journal/index', [App\Http\Controllers\JournalController::class, 'index'])->name('journal.index');
+Route::get('/u/journal/create', [App\Http\Controllers\JournalController::class, 'create'])->name('journal.create');
+Route::post('/u/journal/store', [App\Http\Controllers\JournalController::class, 'store'])->name('journal.store');
+Route::get('/u/journal/{url}/edit', [App\Http\Controllers\JournalController::class, 'edit'])->name('journal.edit');
+Route::put('/u/journal/update/{id}', [App\Http\Controllers\JournalController::class, 'update'])->name('journal.update');
+Route::get('/journal/{url}', function($url){
+    $post = App\Models\Post::where('post_url', $url)->first();
+    return view('journal.show', compact('post'));
+})->name('journal.show');
 
 Route::get('/resume', function () {
     return view('resume');
 })->name('resume');
 
-Route::get('/dashboard', function () {
+Route::get('/u/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 

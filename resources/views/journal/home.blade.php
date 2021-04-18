@@ -4,15 +4,16 @@
             
         @isset($posts)
             @foreach($posts as $post)
-            <div class="overflow-hidden shadow-md mb-4 w-full md:w-3/5 mx-auto ">
+            <a  href="{{route('journal.show', ['url' => $post->post_url])}}">
+            <div class="group overflow-hidden shadow-md mb-4 w-full md:w-3/5 mx-auto bg-white hover:bg-blue-100">
                 <!-- card header -->
-                <div class="px-6 py-4 bg-white border-b border-gray-200 font-bold hover:scale-50 uppercase">
+                <div class="px-6 py-4  border-b border-gray-200 font-bold uppercase">
                     <span class="text-xl">{{$post->title}}</span>
                     <span class="text-md text-gray-400 block font-normal">posted on {{ $post->created_at }}</span>
                 </div>
 
                 <!-- card body -->
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="p-6 border-b border-gray-200 ">
                     <!-- content goes here -->
                     <p class="text-gray-500">
                         {{ $post->description }}
@@ -25,6 +26,7 @@
                 </div>
 
             </div>
+            </a>
             @endforeach
         @else
             <div class="text-center">

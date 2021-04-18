@@ -1,3 +1,9 @@
+@auth
+<div class="bg-gradient-to-r from-green-600 via-green-500 to-green-400 to-green-600 text-white w-full p-4">
+    You are logged in as {{Auth::user()->name}}. Go to <a class="underline" href="{{route('dashboard')}}">dashboard</a>.
+</div>
+@endauth
+
 <nav class="mt-0 mx-0 p-2 md:py-3 md:px-6 w-full bg-white shadow">
             <div class="flex">
                 <div class="pl-4 pt-5 md:pt-3 md:pl-0">

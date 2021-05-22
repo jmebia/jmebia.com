@@ -3,16 +3,15 @@
         
 
         <!-- site intro -->
-        <div class="p-6 md:text-center md:pt-16 bg-white h-auto shadow-lg">
+        <div class="p-6 md:px-72 md:text-center md:pt-16 bg-white h-full shadow-lg">
             <p class="text-4xl">Hi. I am JM.</p> 
-            <p class="text-xl text-gray-400 line-through">I am a Jedi, like my father before me</p>
-            <p class="text-2xl text-gray-600">I am a <span class="text-blue-500 font-bold">web developer</span></p> 
-            <img src="{{ asset('images/pixel-me.png') }}" class="w-48 md:w-64 mx-auto my-12" />
+            <p class="text-xl text-gray-400 line-through">Jedi Knight.</p>
+            <p class="text-5xl text-gray-600">I am a <span class="text-blue-500 font-bold">web developer</span></p>
+            <img src="{{ asset('images/pixel-me.png') }}" class="w-48 md:w-64 mx-auto mt-12 mb-6" />
         </div>
         <!-- end of site intro -->
 
         <div class="h-auto px-10 py-12 text-center">
-            <p class="text-2xl">Under my box of dev stacks are</p> 
             <p class="text-gray-500">The following are the stuff I commonly use in my web projects</p>
 
             <div class="flex flex-wrap justify-center mx-auto w-auto mt-10 md:px-72">

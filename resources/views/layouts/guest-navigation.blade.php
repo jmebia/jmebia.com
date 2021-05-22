@@ -4,7 +4,7 @@
 </div>
 @endauth
 
-<nav class="mt-0 mx-0 p-2 md:py-3 md:px-6 w-full bg-white shadow">
+<nav class="mt-0 mx-0 p-2 md:py-3 md:px-24 w-full bg-white shadow">
             <div class="flex">
                 <div class="pl-4 pt-5 md:pt-3 md:pl-0">
                     <a href="/">

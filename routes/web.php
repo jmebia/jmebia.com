@@ -32,9 +32,9 @@ Route::get('/journal/{url}', function($url){
     return view('journal.show', compact('post'));
 })->name('journal.show');
 
-Route::get('/resume', function () {
-    return view('resume');
-})->name('resume');
+// Route::get('/resume', function () {
+//     return view('resume');
+// })->name('resume');
 
 Route::get('/u/dashboard', function () {
     return view('dashboard');

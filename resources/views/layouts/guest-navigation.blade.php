@@ -14,17 +14,17 @@
 
                 <div class="hidden md:flex ml-auto text-3xl place-self-center text-gray-500">
                     <div class="flex text-lg pt-1 md:mr-4">
-                        <span class="p-4 flex hover:text-gray-200 px-2 
+                        <!-- <span class="p-4 flex hover:text-gray-200 px-2 
                             {{ (request()->is('/')) ? 'border-b border-blue-500' : '' }}">
                             <a href="{{ route('welcome') }}">
                                 Home
                             </a>
-                        </span>
-                        <span class="p-4 flex hover:text-gray-200 px-2">
+                        </span> -->
+                        <!-- <span class="p-4 flex hover:text-gray-200 px-2">
                             <a href="{{ route('journal.home') }}">
                                 Journal
                             </a>
-                        </span>
+                        </span> -->
                     </div>
                     <span class="p-4 flex hover:text-gray-200 px-1">
                         <a href="https://www.linkedin.com/in/jmebia/" target="_blank">
@@ -44,11 +44,11 @@
                 </div>
 
                 <!-- hamburger menu -->
-                <div class="flex md:hidden ml-auto">
+                <!-- <div class="flex md:hidden ml-auto">
                     <button class="px-5 py-0 text-2xl text-gray-500" id="button-menu">
                         <i class="fas fa-bars"></i>
                     </button> 
-                </div>
+                </div> -->
                 <!-- end of hamburger menu -->
 
 

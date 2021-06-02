@@ -14,17 +14,18 @@
 
                 <div class="hidden md:flex ml-auto text-3xl place-self-center text-gray-100">
                     <div class="flex text-lg pt-1 md:mr-4">
-                        <!-- <span class="p-4 flex hover:text-gray-200 px-2 
-                            {{ (request()->is('/')) ? 'border-b border-blue-500' : '' }}">
+                        <span class="p-4 flex hover:text-gray-200 px-2 
+                            {{ (request()->is('/')) ? 'border-b border-white' : '' }}">
                             <a href="{{ route('welcome') }}">
                                 Home
                             </a>
-                        </span> -->
-                        <!-- <span class="p-4 flex hover:text-gray-200 px-2">
+                        </span>
+                        <span class="p-4 flex hover:text-gray-200 px-2 p-4 flex hover:text-gray-200 px-2 
+                            {{ (request()->is('/journal')) ? 'border-b border-white' : '' }}">
                             <a href="{{ route('journal.home') }}">
                                 Journal
                             </a>
-                        </span> -->
+                        </span>
                     </div>
                     <!-- <span class="p-4 flex hover:text-gray-200 px-1">
                         <a href="https://www.linkedin.com/in/jmebia/" target="_blank">

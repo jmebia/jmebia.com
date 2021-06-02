@@ -49,8 +49,9 @@
                     Let's bring yours to life!
                 </p>
                 <p class="text-2xl py-2">
-                    Are you planning to have a running personal website? Or maybe a management information system for your business? 
-                    Whatever it is, if it is web related, you can chat me up or email me at <span class="text-blue-500">me@jmebia.com</span> then let's talk about your awesome idea.
+                    Are you planning to have a running personal website? Or maybe you are looking to build your own information system for your business? 
+                    Whatever it is, if it is web related, you can chat me up or email me at <span class="text-blue-500">me@jmebia.com</span>.
+                    I'll provide a quotation after we take a look of what you have in mind.
                 </p>
             </div>
             

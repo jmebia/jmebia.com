@@ -3,6 +3,12 @@
         <div class="inset-x-0 top-0 pt-24 pb-4 px-6 h-96 bg-gray-100 uppercase">
             
         @isset($posts)
+            @if($posts == "")
+                <div class="text-center text-xl">
+                    The journal is empty...
+                </div>
+            @endif
+
             @foreach($posts as $post)
             <a  href="{{route('journal.show', ['url' => $post->post_url])}}">
             <div class="group overflow-hidden shadow-md mb-4 w-full md:w-3/5 mx-auto bg-white hover:bg-blue-100">
@@ -28,14 +34,11 @@
             </div>
             </a>
             @endforeach
-        @else
-            <div class="text-center">
-                There seems to be nothing here...
-            </div>
+
+            {{ $posts->links() }}
+
         @endif
-            
         
-        {{ $posts->links() }}
         </div>
 
 </x-guest-layout>

@@ -3,9 +3,9 @@
         
 
         <!-- site intro -->
-        <div class="p-6 md:px-72 md:text-center text-white md:pt-16 bg-blue-500 h-80 md:h-96 shadow-lg">
+        <div class="p-6 md:px-72 text-white md:pt-16 bg-blue-500 h-80 md:h-96 shadow-lg">
             <p class="text-4xl">Hi. I am JM.</p> 
-            <p class="text-2xl text-gray-100">I am a <span class="line-through">Jedi Knight.</span></p>
+            <p class="text-2xl text-gray-100">I am a <span class="line-through text-gray-300">Jedi Knight.</span></p>
             <p class="text-6xl text-gray-300"><span class="text-white font-bold">Web Developer</span></p>
             <!-- <img src="{{ asset('images/pixel-me.png') }}" class="w-48 md:w-64 md:mx-auto mt-12 mb-6" /> -->
             <div class="flex md:hidden ml-auto text-3xl place-self-center text-gray-100">
@@ -46,8 +46,8 @@
                     years now under various different clients. My skills ranges from
                      <span class="text-blue-500 font-bold">web design and programming</span> to 
                      <span class="text-blue-500 font-bold">SQL databases</span> and <span class="text-blue-500 font-bold">system architecture</span>. 
-                     I am most comfortable and have the most experience with <span class="text-indigo-500 font-bold">PHP</span>
-                     and <span class="text-red-500 font-bold">Laravel</span> in creating apps.
+                     I am most comfortable and experienced with using <span class="text-indigo-500 font-bold">PHP</span>
+                     and <span class="text-red-500 font-bold">Laravel</span> for development.
                 </p>
                 <p class="text-2xl py-2">
                     Outside my career, I do lots of digital art and gaming. Some <em>Riot Games</em> games and Elder Scrolls Online has been consuming 
@@ -61,5 +61,9 @@
                 
             </div>
         <div>
+
+        <div>
+
+        </div>
 
 </x-guest-layout>

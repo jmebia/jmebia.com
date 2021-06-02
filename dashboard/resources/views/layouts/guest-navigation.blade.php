@@ -4,15 +4,15 @@
 </div>
 @endauth
 
-<nav class="mt-0 mx-0 p-2 md:py-3 md:px-24 w-full bg-white shadow">
+<nav class="mt-0 mx-0 p-2 md:py-3 md:px-24 w-full bg-blue-500 shadow">
             <div class="flex">
-                <div class="pl-4 pt-5 md:pt-3 md:pl-0">
+                <!-- <div class="pl-4 pt-5 md:pt-3 md:pl-0">
                     <a href="/">
-                    <span class="font-vibes text-4xl uppercase">JM Ebia</span>
+                    <span class="font-vibes text-4xl text-white uppercase">JM Ebia</span>
                     </a>
-                </div>
+                </div> -->
 
-                <div class="hidden md:flex ml-auto text-3xl place-self-center text-gray-500">
+                <div class="hidden md:flex ml-auto text-3xl place-self-center text-gray-100">
                     <div class="flex text-lg pt-1 md:mr-4">
                         <!-- <span class="p-4 flex hover:text-gray-200 px-2 
                             {{ (request()->is('/')) ? 'border-b border-blue-500' : '' }}">

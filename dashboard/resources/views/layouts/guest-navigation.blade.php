@@ -26,7 +26,7 @@
                             </a>
                         </span> -->
                     </div>
-                    <span class="p-4 flex hover:text-gray-200 px-1">
+                    <!-- <span class="p-4 flex hover:text-gray-200 px-1">
                         <a href="https://www.linkedin.com/in/jmebia/" target="_blank">
                             <i class="fab fa-linkedin"></i> 
                         </a>
@@ -35,7 +35,7 @@
                         <a href="https://github.com/jmebia" target="_blank">
                             <i class="fab fa-github"></i> 
                         </a>
-                    </span>
+                    </span> -->
                     <!-- <span class="p-4 flex hover:text-gray-200 px-1">
                         <a href="https://twitter.com/poltnine" target="_blank">
                             <i class="fab fa-twitter-square"></i> 

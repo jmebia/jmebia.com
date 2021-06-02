@@ -37,7 +37,7 @@
         <!-- end of site intro -->
 
         <div class="md:grid md:grid-cols-4 gap-4 px-12 md:px-52 py-12 mx-auto">
-            <div class="col-span-3 pb-12 md:p-0">
+            <div class="col-span-3 pb-12 md:p-0 text-gray-600">
                 <p class="text-4xl text-blue-500 font-bold">
                     What? Who?
                 </p>

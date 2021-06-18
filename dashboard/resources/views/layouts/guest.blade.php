@@ -24,6 +24,8 @@
              @yield('styles')
         @endif
 
+        <script data-ad-client="ca-pub-2236132159337336" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     </head>
     <body class="bg-gray-100 m-0 p-0">
         <!-- navbar -->

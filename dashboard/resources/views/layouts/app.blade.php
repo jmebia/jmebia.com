@@ -13,6 +13,8 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+
+        <script data-ad-client="ca-pub-2236132159337336" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
         @hasSection('styles')
              @yield('styles')

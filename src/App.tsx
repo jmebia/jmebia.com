@@ -7,12 +7,6 @@ import Hero from "./components/Hero";
 import TechBackground from "./components/TechBackground";
 import About from "./components/About";
 
-const sections = [
-  { id: "hero", label: "Home" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
-];
 
 function App() {
   return (

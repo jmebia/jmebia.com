@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { HomeIcon, BriefcaseIcon, FolderIcon, EnvelopeIcon, InformationCircleIcon, ChatBubbleBottomCenterIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, BriefcaseIcon, FolderIcon, EnvelopeIcon, ChatBubbleBottomCenterIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Section {

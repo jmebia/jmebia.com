@@ -18,25 +18,61 @@ const experiences = [
     company: "KodeTeQ Business Solutions",
     tech: ['Laravel', 'PHP', 'SQL', 'Docker', 'Linux'],
     description:
-      "Sole game programmer. Implemented gameplay systems, Linux test servers, and project website.",
+      "I built the backend and database for an Event Ticketing System using Laravel with Maya Checkout and webhooks, and helped integrate a third-party casino game provider into our games management platform.",
   },
   
   {
-    year: "Nov 2022 – Feb 2025",
-    title: "(Freelance) Game Programmer",
-    company: "Across Lunacia",
-    tech: ['Godot', 'GDScript', 'Web Development', 'Linux'],
+    year: "Feb 2022 – Mar 2025",
+    title: "Game Developer",
+    company: "Freelance Project: Across Lunacia",
+    tech: ['Godot', 'GDScript', 'Game Design', 'Web Development', 'Linux'],
     description:
       "Sole game programmer. Implemented gameplay systems, Linux test servers, and project website.",
   },
 
   {
-    year: "2018 – 2022",
+    year: "Jun 2021 – Feb 2022",
+    title: "Software Developer",
+    company: "MegaXcess IT Solutions",
+    tech: ['Laravel', 'PHP', 'API Design'],
+    description:
+      "Focused on backend development using Laravel, I built and maintained web applications that supported internal operations and client-facing platforms.",
+  },
+
+  {
+    year: "Dec 2020 – May 2021",
     title: "Full-Stack Web Developer",
     company: "Freelance / Indie",
     tech: ['Laravel', 'PHP', 'JavaScript', 'Python', 'SQL', 'Linux'],
     description:
-      "Built APIs and web apps using Laravel and various other web stacks.",
+      "Built APIs and web apps using Laravel and multiple other web stacks for various clients.",
+  },
+
+  {
+    year: "Feb 2019 – Dec 2020",
+    title: "Web Developer",
+    company: "Wyvern Innovations",
+    tech: ['Laravel', 'PHP', 'JavaScript', 'Python', 'SQL'],
+    description:
+      "Worked on the development of solutions for various clients from planning and research to deployment using various web stacks. I was also responsible for writing python scripts for test automations and data analysis.",
+  },
+
+  {
+    year: "Jun 2018 – Sep 2020",
+    title: "Web Developer",
+    company: "Omnibus Technologies",
+    tech: ['Laravel', 'PHP', 'SQL'],
+    description:
+      "I developed a law firm management system using Laravel, built to streamline client records, case tracking, and billing. This platform is the core product that earned the team a spot in IdeaSpace, a competitive startup incubation program in the Philippines.",
+  },
+
+  {
+    year: "Jun 2018 – Sep 2020",
+    title: "Intern",
+    company: "UP Information Technology Development Center (UPITDC)",
+    tech: ['Customer Support', 'Web Development'],
+    description:
+      "I assisted in web development projects using Django and Bootstrap while gaining hands-on experience in customer support and working within agile workflows.",
   },
 ];
 
@@ -44,7 +80,7 @@ export default function Timeline() {
   return (
     <section id="experience" className="min-h-screen px-6 py-24 text-zinc-100">
 
-    <h2 className="text-4xl font-bold mb-18 text-center text-indigo-400">Work Experiences</h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-18 text-center text-indigo-400">Here is my <u>career history</u>, so far</h2>
     <div className="max-w-6xl mx-auto grid grid-cols-[80px_1fr] gap-12">
 
       {/* Sticky timeline column */}

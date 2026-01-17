@@ -23,13 +23,16 @@ const projects: Project[] = [
     description: "A short and cozy interactive fiction game about rediscovery, memories, and quiet moments. (Made during Pixel Game Jam 2025)",
     link: "https://maiusebi.itch.io/lost-signals",
   },
+  
   // Add more projects here if needed
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="min-h-screen px-6 py-24 text-zinc-100">
-      <h2 className="text-4xl font-bold mb-12 text-center text-indigo-400">Projects</h2>
+      <h2 className="text-2xl md:text-4xl font-bold mb-12 text-center text-indigo-400">
+        Some of my own <u>projects</u>  
+      </h2>
 
       {/* Flex container that centers children and wraps */}
       <div className="flex flex-wrap justify-center gap-8">

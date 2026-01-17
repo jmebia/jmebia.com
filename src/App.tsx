@@ -4,6 +4,8 @@ import Contact from "./components/Contact";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import TechBackground from "./components/TechBackground";
+import About from "./components/About";
 
 const sections = [
   { id: "hero", label: "Home" },
@@ -15,9 +17,11 @@ const sections = [
 function App() {
   return (
     <div className="bg-zinc-800 text-zinc-100 relative">
+      <TechBackground />
       <Sidebar />
-      <Hero />
 
+      <Hero />
+      <About />
       <Projects />
       <Timeline />
       <Contact />

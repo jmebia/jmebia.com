@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { HomeIcon, BriefcaseIcon, FolderIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, BriefcaseIcon, FolderIcon, EnvelopeIcon, InformationCircleIcon, ChatBubbleBottomCenterIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface Section {
@@ -10,6 +10,7 @@ interface Section {
 
 const sections: Section[] = [
   { id: "hero", label: "Home", icon: <HomeIcon className="w-6 h-6" /> },
+  { id: "about", label: "About", icon: <ChatBubbleBottomCenterIcon className="w-6 h-6" /> },
   { id: "projects", label: "Projects", icon: <FolderIcon className="w-6 h-6" /> },
   { id: "experience", label: "Work Experiences", icon: <BriefcaseIcon className="w-6 h-6" /> },
   { id: "contact", label: "Contact", icon: <EnvelopeIcon className="w-6 h-6" /> },

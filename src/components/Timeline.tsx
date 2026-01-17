@@ -99,7 +99,7 @@ export default function Timeline() {
   return (
     <section id="experience" className="min-h-screen px-6 py-24 text-zinc-100">
       <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center text-indigo-400">
-        Here is my <u>career history</u>, so far
+        My <u>career history</u>, so far...
       </h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-[60px_1fr] gap-12">

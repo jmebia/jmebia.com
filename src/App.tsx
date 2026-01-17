@@ -16,8 +16,8 @@ function App() {
 
       <Hero />
       <About />
-      <Projects />
       <Timeline />
+      <Projects />
       <Contact />
       <Footer />
       

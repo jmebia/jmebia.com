@@ -11,8 +11,8 @@ interface Section {
 const sections: Section[] = [
   { id: "hero", label: "Home", icon: <HomeIcon className="w-6 h-6" /> },
   { id: "about", label: "About", icon: <ChatBubbleBottomCenterIcon className="w-6 h-6" /> },
+  { id: "experience", label: "Career Timeline", icon: <BriefcaseIcon className="w-6 h-6" /> },
   { id: "projects", label: "Projects", icon: <FolderIcon className="w-6 h-6" /> },
-  { id: "experience", label: "Work Experiences", icon: <BriefcaseIcon className="w-6 h-6" /> },
   { id: "contact", label: "Contact", icon: <EnvelopeIcon className="w-6 h-6" /> },
 ];
 
@@ -54,29 +54,49 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex flex-col fixed top-1/2 right-4 transform -translate-y-1/2 space-y-4 z-50">
+      <div className="hidden md:flex flex-col fixed top-1/2 right-4 -translate-y-1/2 space-y-4 z-50">
         {sections.map((s) => {
           const isActive = active === s.id;
+
           return (
             <button
               key={s.id}
               onClick={() => handleClick(s.id)}
               className={`
-                flex items-center justify-center
+                group relative flex items-center
                 w-10 h-10 rounded-full
                 transition-all duration-300
                 ${isActive
                   ? "bg-indigo-400 text-white scale-110"
-                  : "bg-zinc-800 text-zinc-300 hover:w-14 hover:h-14 hover:bg-indigo-500 hover:text-white"
+                  : "bg-zinc-800 text-zinc-300 hover:bg-indigo-500 hover:text-white"
                 }
               `}
-              title={s.label}
             >
-              {s.icon}
+              {/* Icon */}
+              <div className="flex items-center justify-center w-10 h-10">
+                {s.icon}
+              </div>
+
+              {/* Hover label */}
+              <span
+                className="
+                  pointer-events-none
+                  absolute right-12
+                  whitespace-nowrap
+                  rounded-md bg-zinc-900 px-3 py-1 text-sm
+                  text-zinc-100 shadow-lg
+                  opacity-0 translate-x-2
+                  group-hover:opacity-100 group-hover:translate-x-0
+                  transition-all duration-200
+                "
+              >
+                {s.label}
+              </span>
             </button>
           );
         })}
       </div>
+
 
       {/* Mobile Hamburger */}
       <div className="md:hidden fixed top-4 right-4 z-50">

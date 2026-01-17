@@ -28,11 +28,7 @@ const messages = [
     side: "right",
   },
   {
-    text: "Professionally. of course",
-    side: "right",
-  },
-  {
-    text: "Glad you asked. Just scroll down for more ;)",
+    text: "Glad you asked! Just keep scrolling down for more ;)",
     side: "left",
   },
 ];

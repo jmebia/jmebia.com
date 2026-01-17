@@ -66,7 +66,7 @@ const experiences = [
   },
 
   {
-    year: "Jun 2018 – Sep 2020",
+    year: "Dec 2017 – Apr 2018",
     title: "Intern",
     company: "UP Information Technology Development Center (UPITDC)",
     tech: ['Customer Support', 'Web Development'],

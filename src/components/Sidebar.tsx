@@ -54,7 +54,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden md:flex flex-col fixed top-1/2 left-4 transform -translate-y-1/2 space-y-4 z-50">
+      <div className="hidden md:flex flex-col fixed top-1/2 right-4 transform -translate-y-1/2 space-y-4 z-50">
         {sections.map((s) => {
           const isActive = active === s.id;
           return (

@@ -30,7 +30,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-[200vh] px-6">
       {/* Pinned Hero at top */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 flex flex-wrap justify-center">
+        <h1 className="text-5xl md:text-8xl font-bold mb-4 flex flex-wrap justify-center">
           {letters.map((char, idx) => (
             <motion.span
               key={idx}

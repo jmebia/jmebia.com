@@ -12,23 +12,15 @@ const messages = [
     side: "right",
   },
   {
-    text: "I’m JM Ebia, a software engineer who loves building systems.",
+    text: "I’m JM, a software engineer who loves building systems.",
     side: "left",
   },
   {
-    text: "I have an educational background in Computer Science and most of my professional work revolves around full-stack development, automation, and cloud platforms.",
-    side: "left",
-  },
-  {
-    text: "But outside work hours, I spend a lot of time playing tabletop and video games, doing digital art, and experimenting with gameplay ideas in engines like Godot.",
-    side: "left",
-  },
-  {
-    text: "Sounds cool. But where can I know more about you?",
+    text: "Sounds cool. Can I know more?",
     side: "right",
   },
   {
-    text: "Glad you asked! Just keep scrolling down for more ;)",
+    text: "Sure! Just keep scrolling ;)",
     side: "left",
   },
 ];

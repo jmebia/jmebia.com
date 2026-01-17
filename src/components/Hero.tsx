@@ -52,7 +52,7 @@ export default function Hero() {
           style={{ opacity: opacity2 }}
           className="text-zinc-400 max-w-xl text-center"
         >
-          Full-Stack • Dev Ops • Indie Game Dev
+          BS Computer Science • Software Engineer
         </motion.p>
       </div>
     </section>

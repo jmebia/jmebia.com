@@ -15,8 +15,8 @@ interface ContactItem {
 const contacts: ContactItem[] = [
   {
     label: "Email",
-    value: "jm.ebia@email.com",
-    href: "mailto:jm.ebia@email.com",
+    value: "hello@jmebia.com",
+    href: "mailto:hello@jmebia.com",
     icon: <EnvelopeIcon className="w-6 h-6" />,
   },
   {

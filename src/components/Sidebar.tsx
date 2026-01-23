@@ -11,8 +11,8 @@ interface Section {
 const sections: Section[] = [
   { id: "hero", label: "Home", icon: <HomeIcon className="w-6 h-6" /> },
   { id: "about", label: "About", icon: <ChatBubbleBottomCenterIcon className="w-6 h-6" /> },
-  { id: "experience", label: "Career Timeline", icon: <BriefcaseIcon className="w-6 h-6" /> },
   { id: "projects", label: "Projects", icon: <FolderIcon className="w-6 h-6" /> },
+  { id: "experience", label: "Career Timeline", icon: <BriefcaseIcon className="w-6 h-6" /> },
   { id: "contact", label: "Contact", icon: <EnvelopeIcon className="w-6 h-6" /> },
 ];
 

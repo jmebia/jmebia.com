@@ -102,9 +102,9 @@ export default function Timeline() {
         My <u>career history</u>, so far...
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-[60px_1fr] gap-12">
-        {/* Timeline column */}
-        <div className="relative">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[60px_1fr] gap-6 md:gap-12">
+        {/* Timeline column - hidden on mobile */}
+        <div className="hidden md:block relative">
           <div className="sticky top-32 flex justify-center">
             <div className="relative h-[70vh] w-px bg-zinc-700">
               {experiences.map((_, i) => {
@@ -113,7 +113,7 @@ export default function Timeline() {
                   <span
                     key={i}
                     className={`absolute -left-[6px] w-3 h-3 rounded-full transition-all duration-300
-                      ${isActive ? "bg-rose-400 scale-125" : "bg-zinc-500"}
+                      ${isActive ? "bg-rose-400 scale-150" : "bg-zinc-500"}
                     `}
                     style={{ top: `${(i / (experiences.length - 1)) * 100}%` }}
                   />
@@ -124,7 +124,7 @@ export default function Timeline() {
         </div>
 
         {/* Cards */}
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-32">
           {experiences.map((exp, i) => (
             <motion.div
               key={i}

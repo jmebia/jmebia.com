@@ -23,7 +23,7 @@ export default function ChatBubble({ text, side = "left" }: Props) {
           text-zinc-100 text-lg leading-relaxed
           ${isLeft
             ? "bg-zinc-700 rounded-bl-sm"
-            : "bg-indigo-500 rounded-br-sm"}
+            : "bg-rose-500 rounded-br-sm"}
           shadow-md
         `}
       >

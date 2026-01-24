@@ -98,7 +98,7 @@ export default function Timeline() {
 
   return (
     <section id="experience" className="min-h-screen px-6 py-24 text-zinc-100">
-      <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center text-indigo-400">
+      <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center text-rose-400">
         My <u>career history</u>, so far...
       </h2>
 
@@ -113,7 +113,7 @@ export default function Timeline() {
                   <span
                     key={i}
                     className={`absolute -left-[6px] w-3 h-3 rounded-full transition-all duration-300
-                      ${isActive ? "bg-indigo-400 scale-125" : "bg-zinc-500"}
+                      ${isActive ? "bg-rose-400 scale-125" : "bg-zinc-500"}
                     `}
                     style={{ top: `${(i / (experiences.length - 1)) * 100}%` }}
                   />
@@ -140,13 +140,13 @@ export default function Timeline() {
             >
               <p className="text-sm text-zinc-400 mb-1">{exp.year}</p>
               <h3 className="text-2xl font-semibold">{exp.title}</h3>
-              <p className="text-indigo-400 mb-3">{exp.company}</p>
+              <p className="text-rose-400 mb-3">{exp.company}</p>
 
               <div className="flex flex-wrap gap-2 mb-5">
                 {exp.tech.map((t, idx) => (
                   <span
                     key={idx}
-                    className="text-xs bg-indigo-400 text-zinc-900 px-2 py-1 rounded"
+                    className="text-xs bg-rose-400 text-zinc-900 px-2 py-1 rounded"
                   >
                     {t}
                   </span>

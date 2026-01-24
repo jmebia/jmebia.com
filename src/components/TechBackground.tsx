@@ -19,7 +19,7 @@ export default function TechBackground() {
         preserveAspectRatio="xMidYMid slice"
       >
         {/* Lines */}
-        <g stroke="rgb(99 102 241)" strokeWidth="1" opacity="1.0">
+        <g stroke="rgb(234 179 8)" strokeWidth="1" opacity="1.0">
           <line x1="100" y1="200" x2="400" y2="100" />
           <line x1="400" y1="100" x2="700" y2="250" />
           <line x1="700" y1="250" x2="900" y2="150" />
@@ -33,7 +33,7 @@ export default function TechBackground() {
         </g>
 
         {/* Nodes */}
-        <g fill="rgb(129 140 248)" opacity="1.0">
+        <g fill="rgb(250 204 21)" opacity="1.0">
           <circle cx="100" cy="200" r="4" />
           <circle cx="400" cy="100" r="4" />
           <circle cx="700" cy="250" r="4" />

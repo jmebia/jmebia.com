@@ -40,7 +40,7 @@ export default function Contact() {
       className="min-h-screen px-6 py-24 flex flex-col items-center"
     >
       {/* Sticky Title */}
-      <h2 className="text-2xl md:text-4xl font-bold mb-10 text-center text-rose-400">
+      <h2 className="text-2xl md:text-4xl font-bold mb-10 text-center text-sky-400">
         You can also find or contact me at the following links!
       </h2>
       <motion.div 
@@ -77,11 +77,11 @@ export default function Contact() {
               w-full max-w-sm rounded-xl border border-zinc-700
               bg-zinc-900/60 backdrop-blur
               p-6 flex flex-col items-start space-y-3
-              hover:border-rose-400 hover:shadow-[0_0_25px_rgba(99,102,241,0.25)]
+              hover:border-sky-400 hover:shadow-[0_0_25px_rgba(99,102,241,0.25)]
               transition
             "
           >
-            <div className="text-rose-400">{c.icon}</div>
+            <div className="text-sky-400">{c.icon}</div>
             <h3 className="text-lg font-semibold">{c.label}</h3>
             <p className="text-zinc-400 text-sm break-all">{c.value}</p>
           </motion.a>

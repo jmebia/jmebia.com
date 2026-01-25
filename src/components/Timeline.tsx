@@ -97,65 +97,68 @@ export default function Timeline() {
   }, []);
 
   return (
-    <section id="experience" className="min-h-screen px-6 py-24 text-zinc-100">
-      <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center text-rose-400">
+    <section id="experience" className="h-screen flex flex-col px-6 py-12 text-zinc-100">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-sky-400 flex-shrink-0">
         My <u>career history</u>, so far...
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[60px_1fr] gap-6 md:gap-12">
-        {/* Timeline column - hidden on mobile */}
-        <div className="hidden md:block relative">
-          <div className="sticky top-32 flex justify-center">
-            <div className="relative h-[70vh] w-px bg-zinc-700">
-              {experiences.map((_, i) => {
-                const isActive = i === activeIndex;
-                return (
-                  <span
-                    key={i}
-                    className={`absolute -left-[6px] w-3 h-3 rounded-full transition-all duration-300
-                      ${isActive ? "bg-rose-400 scale-150" : "bg-zinc-500"}
-                    `}
-                    style={{ top: `${(i / (experiences.length - 1)) * 100}%` }}
-                  />
-                );
-              })}
+      {/* Scrollable container */}
+      <div className="flex-1 overflow-y-auto overflow-x-hidden pr-2 scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[60px_1fr] gap-6 md:gap-12 py-8">
+          {/* Timeline column - hidden on mobile */}
+          <div className="hidden md:block relative">
+            <div className="sticky top-8 flex justify-center">
+              <div className="relative h-[60vh] w-px bg-zinc-700">
+                {experiences.map((_, i) => {
+                  const isActive = i === activeIndex;
+                  return (
+                    <span
+                      key={i}
+                      className={`absolute -left-[6px] w-3 h-3 rounded-full transition-all duration-300
+                        ${isActive ? "bg-sky-400 scale-150" : "bg-zinc-500"}
+                      `}
+                      style={{ top: `${(i / (experiences.length - 1)) * 100}%` }}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Cards */}
-        <div className="space-y-16 md:space-y-32">
-          {experiences.map((exp, i) => (
-            <motion.div
-              key={i}
-              ref={(el) => {
-                itemRefs.current[i] = el;
-              }}
-              data-index={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-              className="max-w-xl"
-            >
-              <p className="text-sm text-zinc-400 mb-1">{exp.year}</p>
-              <h3 className="text-2xl font-semibold">{exp.title}</h3>
-              <p className="text-rose-400 mb-3">{exp.company}</p>
+          {/* Cards */}
+          <div className="space-y-16 md:space-y-24">
+            {experiences.map((exp, i) => (
+              <motion.div
+                key={i}
+                ref={(el) => {
+                  itemRefs.current[i] = el;
+                }}
+                data-index={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ margin: "-50px" }}
+                transition={{ duration: 0.5 }}
+                className="max-w-xl"
+              >
+                <p className="text-sm text-zinc-400 mb-1">{exp.year}</p>
+                <h3 className="text-2xl font-semibold">{exp.title}</h3>
+                <p className="text-sky-400 mb-3">{exp.company}</p>
 
-              <div className="flex flex-wrap gap-2 mb-5">
-                {exp.tech.map((t, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs bg-rose-400 text-zinc-900 px-2 py-1 rounded"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {exp.tech.map((t, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs bg-sky-400 text-zinc-900 px-2 py-1 rounded"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
 
-              <p className="text-zinc-300 leading-relaxed">{exp.description}</p>
-            </motion.div>
-          ))}
+                <p className="text-zinc-300 leading-relaxed">{exp.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -67,8 +67,8 @@ export default function Sidebar() {
                 w-10 h-10 rounded-full
                 transition-all duration-300
                 ${isActive
-                  ? "bg-rose-400 text-white scale-110"
-                  : "bg-zinc-800 text-zinc-300 hover:bg-rose-500 hover:text-white"
+                  ? "bg-sky-400 text-white scale-110"
+                  : "bg-zinc-800 text-zinc-300 hover:bg-sky-500 hover:text-white"
                 }
               `}
             >
@@ -127,7 +127,7 @@ export default function Sidebar() {
                     key={s.id}
                     onClick={() => handleClick(s.id)}
                     className={`flex items-center space-x-2 text-lg font-medium transition
-                      ${isActive ? "text-rose-400" : "text-zinc-100 hover:text-rose-400"}
+                      ${isActive ? "text-sky-400" : "text-zinc-100 hover:text-sky-400"}
                     `}
                   >
                     {s.icon}

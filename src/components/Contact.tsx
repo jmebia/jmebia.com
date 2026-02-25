@@ -1,91 +1,117 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  EnvelopeIcon,
-  LinkIcon,
-  CodeBracketIcon,
-} from "@heroicons/react/24/outline";
-
-interface ContactItem {
-  label: string;
-  value: string;
-  href: string;
-  icon: React.ReactNode;
-}
-
-const contacts: ContactItem[] = [
-  {
-    label: "Email",
-    value: "hello@jmebia.com",
-    href: "mailto:hello@jmebia.com",
-    icon: <EnvelopeIcon className="w-6 h-6" />,
-  },
-  {
-    label: "GitHub",
-    value: "github.com/jmebia",
-    href: "https://github.com/jmebia",
-    icon: <CodeBracketIcon className="w-6 h-6" />,
-  },
-  {
-    label: "LinkedIn",
-    value: "jmebia",
-    href: "https://linkedin.com/in/jmebia",
-    icon: <LinkIcon className="w-6 h-6" />,
-  },
-];
 
 export default function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      // Sign up at formspree.io and replace YOUR_FORM_ID with your form's ID
+      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          _replyto: form.email,
+          message: form.message,
+        }),
+      });
+      if (res.ok) {
+        setStatus("sent");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
-    <section
-      id="contact"
-      className="min-h-screen px-6 py-24 flex flex-col items-center"
-    >
-      {/* Sticky Title */}
-      <h2 className="text-2xl md:text-4xl font-bold mb-10 text-center text-sky-400">
-        You can also find or contact me at the following links!
-      </h2>
-      <motion.div 
-        initial={{ opacity: 0, y: 40 }}
+    <section id="contact" className="px-6 py-24 flex flex-col items-center text-zinc-900 dark:text-zinc-100">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-        className="mb-10"
+        transition={{ duration: 0.6 }}
+        className="max-w-xl w-full"
       >
-        <p className="text-lg text-zinc-300">
-            I’m always open to chatting about new projects, collaborations, or just sharing cool ideas.
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-zinc-900 dark:text-white">
+          Get in Touch
+        </h2>
+        <p className="text-zinc-500 dark:text-zinc-400 mb-8">
+          Have a project in mind or just want to say hi? Send me a message.
         </p>
-      </motion.div>
-      
-      <motion.div 
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full justify-items-center"
-      >
-        {contacts.map((c, i) => (
-          <motion.a
-            key={i}
-            href={c.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -6, scale: 1.03 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="
-              w-full max-w-sm rounded-xl border border-zinc-700
-              bg-zinc-900/60 backdrop-blur
-              p-6 flex flex-col items-start space-y-3
-              hover:border-sky-400 hover:shadow-[0_0_25px_rgba(99,102,241,0.25)]
-              transition
-            "
+
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label className="block text-sm text-zinc-500 dark:text-zinc-400 mb-1">Name</label>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-3 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm text-zinc-500 dark:text-zinc-400 mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-3 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm text-zinc-500 dark:text-zinc-400 mb-1">Message</label>
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              required
+              rows={5}
+              className="w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-3 text-zinc-900 dark:text-zinc-100 focus:outline-none focus:border-zinc-900 dark:focus:border-white transition-colors resize-none"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="w-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold py-3 rounded-lg hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors disabled:opacity-50 cursor-pointer"
           >
-            <div className="text-sky-400">{c.icon}</div>
-            <h3 className="text-lg font-semibold">{c.label}</h3>
-            <p className="text-zinc-400 text-sm break-all">{c.value}</p>
-          </motion.a>
-        ))}
+            {status === "sending" ? "Sending..." : "Send Message"}
+          </button>
+
+          {status === "sent" && (
+            <p className="text-green-400 text-sm text-center">
+              Message sent! I'll get back to you soon.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-red-400 text-sm text-center">
+              Something went wrong. Try again or email me directly at{" "}
+              <a href="mailto:hello@jmebia.com" className="underline">
+                hello@jmebia.com
+              </a>
+              .
+            </p>
+          )}
+        </form>
       </motion.div>
     </section>
   );

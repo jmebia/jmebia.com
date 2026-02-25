@@ -1,43 +1,37 @@
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-/** components */
-import Timeline from "./components/Timeline";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+import { ThemeProvider } from "./context/ThemeContext";
+import Header from "./components/Header";
 import Hero from "./components/Hero";
-import TechBackground from "./components/TechBackground";
 import About from "./components/About";
+import Timeline from "./components/Timeline";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Loader from "./components/Loader";
-
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-
-    <>
+    <ThemeProvider>
       <AnimatePresence>
         {loading && <Loader onFinish={() => setLoading(false)} />}
       </AnimatePresence>
 
       {!loading && (
-        <div className="bg-zinc-800 text-zinc-100 relative">
-          <TechBackground />
-          <Sidebar />
-
-          <Hero />
-          <About />
-          <Projects />
-          <Timeline />
-          <Contact />
+        <div className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 min-h-screen transition-colors duration-300">
+          <Header />
+          <main className="pt-16">
+            <Hero />
+            <About />
+            <Timeline />
+            <Contact />
+          </main>
           <Footer />
-            
         </div>
       )}
-    </>
+    </ThemeProvider>
   );
 }
 

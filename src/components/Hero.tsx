@@ -1,61 +1,36 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useMemo } from "react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
-  const name = "JM Ebia";
-  const letters = name.split("");
-
-  const { scrollY } = useScroll();
-
-  const dissolveStart = 200;
-  const dissolveEnd = 500;
-
-  // For subtitle
-  const infoOpacity = useTransform(scrollY, [100, dissolveEnd], [1, 0]);
-
-  // Stable random values (important: don't recalc every render)
-  const randomOffsets = useMemo(
-    () =>
-      letters.map(() => ({
-        x: Math.random() * 80 - 40,
-        y: Math.random() * -120 - 40, // float upward
-        rotate: Math.random() * 240 - 120,
-        scale: Math.random() * 0.4 + 0.8,
-      })),
-    []
-  );
-
   return (
-    <section id="hero" className="relative min-h-[200vh] px-6">
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
-        <h1 className="text-5xl md:text-8xl font-bold mb-4 flex flex-wrap justify-center">
-          {letters.map((char, idx) => {
-            const opacity = useTransform(scrollY, [dissolveStart, dissolveEnd], [1, 0]);
-            const x = useTransform(scrollY, [dissolveStart, dissolveEnd], [0, randomOffsets[idx].x]);
-            const y = useTransform(scrollY, [dissolveStart, dissolveEnd], [0, randomOffsets[idx].y]);
-            const rotate = useTransform(scrollY, [dissolveStart, dissolveEnd], [0, randomOffsets[idx].rotate]);
-            const scale = useTransform(scrollY, [dissolveStart, dissolveEnd], [1, randomOffsets[idx].scale]);
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center px-4 pt-8 pb-16 md:py-24"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="bg-zinc-50 dark:bg-zinc-900/60 backdrop-blur border border-zinc-200 dark:border-zinc-700 rounded-2xl p-8 md:p-14 flex flex-col md:flex-row items-center gap-8 md:gap-14 max-w-3xl w-full"
+      >
+        {/* Photo */}
+        <div className="flex-shrink-0">
+          <img
+            src="/images/profilepic.jpeg"
+            alt="JM Ebia"
+            className="w-44 h-44 md:w-56 md:h-56 object-cover rounded-xl border border-zinc-200 dark:border-zinc-600"
+          />
+        </div>
 
-            return (
-              <motion.span
-                key={idx}
-                style={{ opacity, x, y, rotate, scale }}
-                className="inline-block will-change-transform"
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            );
-          })}
-        </h1>
-
-        <motion.p
-          style={{ opacity: infoOpacity }}
-          className="text-zinc-400 max-w-xl text-center"
-        >
-          BS Computer Science • Software Engineer
-        </motion.p>
-
-      </div>
+        {/* Info */}
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 dark:text-zinc-100 mb-3">
+            J.M. Ebia
+          </h1>
+          <p className="text-xl md:text-2xl text-zinc-500 dark:text-zinc-400 font-medium">
+            Software Engineer
+          </p>
+        </div>
+      </motion.div>
     </section>
   );
 }

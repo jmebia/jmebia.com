@@ -45,7 +45,7 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="max-w-xl w-full"
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-zinc-900 dark:text-white">
+        <h2 className="font-bebas text-4xl md:text-5xl tracking-wide mb-2 text-zinc-900 dark:text-white">
           Get in Touch
         </h2>
         <p className="text-zinc-500 dark:text-zinc-400 mb-8">

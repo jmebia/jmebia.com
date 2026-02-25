@@ -9,11 +9,11 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     year: "Nov 2025 – Present",
-    title: "Software Engineer",
+    title: "Custom Software Engineer Sr Analyst",
     company: "Accenture",
     tech: ["Python", "AI Ops"],
     description:
-      "Focused on cloud operations, monitoring, automation, and supporting AI-driven systems in production.",
+      "Under GenWizard's Japan Innovation team, I focus on cloud operations, automation, and documentation, supporting AI-driven systems from development to production using Python, Node.js, and AI technologies, while collaborating with Japanese clients and colleagues.",
   },
   {
     year: "March 2025 – September 2025",

@@ -20,7 +20,7 @@ function App() {
       </AnimatePresence>
 
       {!loading && (
-        <div className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 min-h-screen transition-colors duration-300">
+        <div className="bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 min-h-screen transition-colors duration-300">
           <Header />
           <main className="pt-16">
             <Hero />

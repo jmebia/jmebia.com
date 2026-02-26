@@ -41,7 +41,7 @@ export default function Timeline() {
 
         {/* Sticky node sidebar — desktop only */}
         <div className="hidden md:block">
-          <div className="sticky top-20 h-[calc(100vh-7rem)] flex justify-center">
+          <div className="sticky top-30 h-[calc(75vh-7rem)] flex justify-center">
             <div className="relative h-full w-px bg-zinc-200 dark:bg-zinc-700">
               {experiences.map((_, i) => {
                 const isActive = i === activeIndex;
@@ -50,7 +50,7 @@ export default function Timeline() {
                     key={i}
                     onClick={() => scrollToCard(i)}
                     className="group absolute -left-[10px] flex items-center"
-                    style={{ top: `${(i / (experiences.length - 1)) * 50}%` }}
+                    style={{ top: `${(i / (experiences.length - 1)) * 100}%` }}
                   >
                     {/* Node dot */}
                     <span

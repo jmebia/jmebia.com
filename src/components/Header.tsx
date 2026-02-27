@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/" },
+  { label: "CV", to: "/cv" },
 ];
 
 const socials = [
@@ -94,13 +93,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
-  };
-
   return (
     <>
       <header
@@ -112,21 +104,20 @@ export default function Header() {
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" onClick={(e) => handleNavClick(e, "#hero")} className="flex items-center">
+          <Link to="/" className="flex items-center">
             <Logo isDark={isDark} />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
+              <Link
+                key={link.to}
+                to={link.to}
                 className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors text-sm font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -187,14 +178,14 @@ export default function Header() {
             >
               <div className="px-6 py-4 flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setMobileOpen(false)}
                     className="text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white transition-colors text-base font-medium py-1"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </motion.nav>

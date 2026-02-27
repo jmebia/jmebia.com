@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -21,13 +22,28 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed"
         >
-          I've been coding and building software solutions for{" "}
-          <span className="underline font-bold">over seven years</span>,
-          turning ideas into working systems that people can actually use. My
-          work spans web applications, backend services, automation, and
-          deployment — anything needed to take a project from concept to
-          production.
+          For over seven years, I’ve been building software that turns ideas into usable systems. 
+          I hold a BS in Computer Science, work across the full stack, 
+          and spend much of my free time exploring game development and interactive systems.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-6"
+        >
+          <Link
+            to="/cv"
+            className="inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-80 transition-opacity"
+          >
+            View my CV
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

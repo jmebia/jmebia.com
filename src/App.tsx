@@ -1,14 +1,12 @@
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 import { ThemeProvider } from "./context/ThemeContext";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Timeline from "./components/Timeline";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Layout from "./components/Layout";
 import Loader from "./components/Loader";
+import Home from "./pages/Home";
+import CV from "./pages/CV";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,16 +18,12 @@ function App() {
       </AnimatePresence>
 
       {!loading && (
-        <div className="bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 min-h-screen transition-colors duration-300">
-          <Header />
-          <main className="pt-16">
-            <Hero />
-            <About />
-            <Timeline />
-            <Contact />
-          </main>
-          <Footer />
-        </div>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/cv" element={<CV />} />
+          </Route>
+        </Routes>
       )}
     </ThemeProvider>
   );

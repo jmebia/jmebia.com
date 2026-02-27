@@ -16,15 +16,14 @@ export const techStack: TechItem[] = [
   { name: "Godot",        color: "#a78bfa", depth:  6  },
   { name: "GDScript",     color: "#2dd4bf", depth: -3  },
   { name: "React",        color: "#22d3ee", depth:  1  },
-  { name: "Next.js",      color: "#e4e4e7", depth: -6  },
+  { name: "Next.js",      color: "#34d399", depth: -6  },
   { name: "Node.js",      color: "#4ade80", depth:  4  },
-  { name: "Django",       color: "#6ee7b7", depth: -2  },
   { name: "REST APIs",    color: "#fdba74", depth:  3  },
   { name: "Git",          color: "#fca5a5", depth: -4  },
-  { name: "PostgreSQL",   color: "#93c5fd", depth:  5  },
-  { name: "Redis",        color: "#f87171", depth: -3  },
+  { name: "Flask",        color: "#93c5fd", depth:  5  },
+  { name: "Java",         color: "#f87171", depth: -3  },
   { name: "Tailwind CSS", color: "#5eead4", depth:  2  },
-  { name: "AI Ops",       color: "#c4b5fd", depth: -5  },
+  { name: "Twilio",       color: "#c4b5fd", depth: -5  },
 ];
 
 // Brick-wall row groupings with zigzag offsets (px)

@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -19,7 +20,7 @@ export default function Hero() {
         {/* Photo */}
         <div className="flex-shrink-0">
           <img
-            src="/images/profilepic.jpeg"
+            src="/images/croppedprofilepic.png"
             alt="JM Ebia"
             className="scale-100 w-44 h-44 md:w-100 md:h-100 object-cover rounded-xl border border-zinc-200 dark:border-zinc-600"
           />
@@ -32,6 +33,10 @@ export default function Hero() {
           </h1>
           <p className="font-bebas text-2xl md:text-3xl tracking-widest text-zinc-500 dark:text-zinc-400">
             Software Engineer
+          </p>
+          <hr className="w-70 border-zinc-400 dark:border-zinc-600 mt-2 mb-2" />
+          <p className="font-bebas text-md md:text-xl tracking-wide  text-zinc-400 dark:text-zinc-500">
+            <MapPinIcon className="w-5 h-5 inline"/> Metro Manila, PH
           </p>
         </div>
       </motion.div>

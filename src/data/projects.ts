@@ -10,6 +10,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'tcg-riftnerd',
+    title: 'RiftNerd - Riftbound TCG Tool',
+    description: [
+      'rowse, search, and explore every card from Riot Games\' Riftbound TCG. Powerful search, advanced filters, and detailed card pages.',
+    ],
+    image: '/images/riftnerd.jpg',
+    tags: ['Fast API', 'React', 'Database'],
+    buttonText: 'Visit site',
+    link: 'https://tcg.riftnerd.com/',
+  },
+  {
     id: 'bastabudget',
     title: 'BastaBudget',
     description: [

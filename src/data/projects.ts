@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description: [
       'rowse, search, and explore every card from Riot Games\' Riftbound TCG. Powerful search, advanced filters, and detailed card pages.',
     ],
-    image: '/images/riftnerd.jpg',
+    image: '/images/riftnerd.jpeg',
     tags: ['Fast API', 'React', 'Database'],
     buttonText: 'Visit site',
     link: 'https://tcg.riftnerd.com/',

@@ -20,10 +20,8 @@ export const techStack: TechItem[] = [
   { name: "Node.js",      color: "#4ade80", depth:  4  },
   { name: "REST APIs",    color: "#fdba74", depth:  3  },
   { name: "Git",          color: "#fca5a5", depth: -4  },
-  { name: "Flask",        color: "#93c5fd", depth:  5  },
-  { name: "Java",         color: "#f87171", depth: -3  },
   { name: "Tailwind CSS", color: "#5eead4", depth:  2  },
-  { name: "Twilio",       color: "#c4b5fd", depth: -5  },
+  { name: "Claude",       color: "#c4b5fd", depth: -5  },
 ];
 
 // Brick-wall row groupings with zigzag offsets (px)

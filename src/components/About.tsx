@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { techRows } from "../data/techStack";
 
 export default function About() {
   return (
-    <section id="about" className="px-6 py-24 flex flex-col items-center text-zinc-900 dark:text-zinc-100">
+    <section
+      id="about"
+      className="px-6 py-24 flex flex-col items-center text-zinc-900 dark:text-zinc-100"
+    >
       <div className="max-w-2xl w-full">
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
@@ -22,8 +26,8 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed"
         >
-          For over seven years, I’ve been building software that turns ideas into usable systems. 
-          I hold a BS in Computer Science, work across the full stack, 
+          For over seven years, I’ve been building software that turns ideas into usable systems.
+          I hold a BS in Computer Science, work across the full stack,
           and spend much of my free time exploring game development and interactive systems.
         </motion.p>
 
@@ -32,6 +36,35 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-8 overflow-x-hidden"
+        >
+          <p className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-3">
+            Tech I work with
+          </p>
+          <div className="space-y-2">
+            {techRows
+              .filter((row) => row.items.length > 0)
+              .map((row, i) => (
+                <div key={i} className="flex flex-wrap gap-2" style={{ paddingLeft: row.offset }}>
+                  {row.items.map((tech) => (
+                    <span
+                      key={tech.name}
+                      style={{ borderColor: tech.color }}
+                      className="px-4 py-1.5 rounded-full border bg-transparent text-sm text-zinc-800 dark:text-zinc-200 whitespace-nowrap"
+                    >
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
+              ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, delay: 0.35 }}
           className="mt-6"
         >
           <Link
